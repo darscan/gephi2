@@ -16,7 +16,7 @@
     <packaging>nbm-application</packaging>
     <version>0.9.3-SNAPSHOT</version>
     <name>gephi-app</name>
-    
+
     <properties>
         <jarGoalPhase>package</jarGoalPhase>
         <skipCreateTargz>true</skipCreateTargz>
@@ -472,7 +472,7 @@
             <artifactId>ui-library-wrapper</artifactId>
         </dependency>
     </dependencies>
-    
+
     <build>
         <plugins>
             <!-- Build jar only when not in deployment mode so install does not fail due to no attached artifacts -->
@@ -491,7 +491,7 @@
                     </execution>
                 </executions>
             </plugin>
-            
+
             <!-- Disable the ZIP goal. Also set up the location of the gephi.conf -->
             <plugin>
                 <groupId>org.codehaus.mojo</groupId>
@@ -634,7 +634,7 @@
                                     </target>
                                 </configuration>
                             </execution>
-                            
+
                             <!-- Execute InnoSetup with the gephi.iss script -->
                             <execution>
                                 <id>create-windows-installer</id>
@@ -660,7 +660,7 @@
                                     </target>
                                 </configuration>
                             </execution>
-                            
+
                             <!-- Create the Mac OS X application bundle and dmg file -->
                             <execution>
                                 <id>create-app-bundle</id>
@@ -793,7 +793,7 @@
                             </execution>
                         </executions>
                     </plugin>
-                    
+
                     <!-- Assembler to produce linux's tar.gz -->
                     <plugin>
                         <artifactId>maven-assembly-plugin</artifactId>
@@ -839,7 +839,7 @@
                                     </artifacts>
                                 </configuration>
                             </execution>
-                            
+
                             <!-- Attach the final exe installer for deployment -->
                             <execution>
                                 <id>attach-exe</id>
@@ -858,7 +858,7 @@
                                     </artifacts>
                                 </configuration>
                             </execution>
-                            
+
                             <!-- Attach the final DMG for deployment -->
                             <execution>
                                 <id>attach-dmg</id>
@@ -940,7 +940,7 @@
             </build>
         </profile>
 
-        
+
         <!-- Profile used along with deployment to create the tar.gz artifact -->
         <profile>
             <id>create-targz</id>
@@ -948,7 +948,7 @@
                 <skipCreateTargz>false</skipCreateTargz>
             </properties>
         </profile>
-        
+
         <!-- Profile used along with targz and windows exe to replace the windows icon -->
         <profile>
             <id>replace-windows-icon</id>
@@ -1003,7 +1003,7 @@
                 </plugins>
             </build>
         </profile>
-        
+
         <!-- Profile used along with deployment to create the dmg archive -->
         <profile>
             <id>create-dmg</id>
