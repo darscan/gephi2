@@ -24,7 +24,7 @@
         <dependency>
             <groupId>org.apache.xmlgraphics</groupId>
             <artifactId>batik-transcoder</artifactId>
-            <version>1.9.1</version>
+            <version>1.17</version>
             <exclusions>
                 <!-- Avoid including a copy of javax.xml and org.w3c classes -->
                 <exclusion>
